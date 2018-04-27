@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dev web junior - P3</title>
+    <link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body>
+    <header>
+        <figure id="slider">
+            <span class="before"><</span>
+            <img src="/assets/img/slider-1.jpg" alt="Slide 1">
+            <img src="/assets/img/slider-2.jpg" alt="Slide 2">
+            <img src="/assets/img/slider-3.jpg" alt="Slide 3">
+            <img src="/assets/img/slider-4.jpg" alt="Slide 4">
+            <figcaption>
+                <h1>Reserver votre Velo'v</h1>
+                <div>Choisisez votre station de départ</div>
+                <div>Reservez un velo'v</div>
+                <div>Signer</div>
+                <div>Rendez-vous dans votre station, votre velo'v est reservé pour 20 minutes</div>
+            </figcaption>
+            <span class="after">></span>
+        </figure>
+    </header>
+    <section id="map">
+        <div id="gmap"></div>
+        <aside id="station_info"></aside>
+        <div id="signature">
+            <canvas width="250" height="250">
+                <p>Désolé, votre navigateur ne supporte pas Canvas. Mettez-vous à jour</p>
+            </canvas>
+            <a href="#">Valider</a>
+        </div>
+    </section>
+    <section id="reservations"></section>
+    <script src="assets/js/http.js"></script>
+    <script src="assets/js/components/slider.js"></script>
+    <script src="assets/js/components/signature.js"></script>
+    <script src="assets/js/components/map.js"></script>
+    <script src="assets/js/components/stations.js"></script>
+    <script src="assets/js/components/reservations.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key={your_key}&callback=map.initMap"
+    async defer></script>
+</body>
+</html>
