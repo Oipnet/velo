@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box
+}
+
+html, body, figure, img {
+    margin: 0;
+    padding: 0;
+}
+
+#slider {
+    height: 75vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+#slider .before {
+    position: absolute;
+    text-align: center;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%) translateX(-25%);
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    opacity: 0.8;
+    background-color: #ffffff;
+    z-index: 9;
+}
+
+#slider .after {
+    position: absolute;
+    text-align: center;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) translateX(25%);
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    opacity: 0.8;
+    background-color: #ffffff;
+    z-index: 9;
+}
+
+#slider img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+#slider img.active {
+    display: block;
+}
+
+#slider figcaption {
+    width: 75vw;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: 45px;
+    height: 150px;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 15px;
+}
+
+#slider figcaption div {
+    display: none;
+}
+
+#slider figcaption div.active {
+    display: block;
+}
+
+#map {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+#gmap {
+    height: 500px;
+    width: 100%;
+}
+
+#station_info {
+    display: none;
+    background-color: #c0c0c0;
+    padding: 15px;
+    width:500px;
+}
+
+#signature {
+    position: absolute;
+    display: none;
+    width: 300px;
+    height: 300px;
+    bottom: 0;
+    right: 0;
+    background-color: #c6c6c6;
+    padding: 5px;
+}
+
+#signature canvas {
+    background-color: #ffffff;
+    border: 1px solid #000000;
+}
+
+#signature canvas:hover {
+    cursor: pointer;
+}
+
+#reservations {
+    padding: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    #slider figcaption {
+        position: relative;
+        width: 100%;
+    }
+    #map {
+        flex-direction: column;
+    }
+
+    #station_info {
+        width: 100%;
+    }
+}
